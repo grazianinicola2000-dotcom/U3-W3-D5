@@ -4,6 +4,12 @@ export const ADD_TO_FAVOURITE = "ADD_TO_FAVOURITE";
 export const REMOVE_FROM_FAVOURITE = "REMOVE_FROM_FAVOURITE";
 export const ADD_FAV_DUPLICATE = "ADD_FAV_DUPLICATE";
 export const RESET_DUPLICATE = "RESET_DUPLICATE";
+export const SET_CURRENT_SONG = "SET_CURRENT_SONG";
+
+export const setCurrentSong = (song) => ({
+  type: SET_CURRENT_SONG,
+  payload: song,
+});
 
 export const addToFavouriteAction = (data) => {
   return (dispatch, getState) => {

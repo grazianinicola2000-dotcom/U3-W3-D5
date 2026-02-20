@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addToFavouriteAction } from "../redux/actions";
+import { setCurrentSong } from "../redux/actions";
 
 const SongCardGen = function (props) {
   const dispatch = useDispatch();
@@ -8,8 +9,17 @@ const SongCardGen = function (props) {
     dispatch(addToFavouriteAction(props));
   };
 
+  const handlePlay = () => {
+    dispatch(setCurrentSong(props));
+  };
+
   return (
-    <div className="flex flex-col w-[150px]">
+    <div
+      className="flex flex-col w-[150px]"
+      onClick={() => {
+        handlePlay();
+      }}
+    >
       <div className="relative">
         <img className="rounded-lg w-[100%]" src={props.album.cover} alt="prologo_con_Abuelo" />
         <i
