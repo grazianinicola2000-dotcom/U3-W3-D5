@@ -1,30 +1,47 @@
 import "./App.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import NavBar from "./components/NavBarMobile";
-import News from "./components/News";
-import NewEpisodes from "./components/NewEpisodes";
-import MoreToExplore from "./components/MoreToExplore";
 import Footer from "./components/Footer";
 import PlayerMobile from "./components/PlayerMobile";
 import NavBarDesktop from "./components/NavBarDesktop";
 import SideBar from "./components/SideBar";
+import { useDispatch, useSelector } from "react-redux";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Favourites from "./components/Favourites";
+import AlertFav from "./components/AlertFav";
+import { useEffect } from "react";
+import { RESET_DUPLICATE } from "./redux/actions";
 
 function App() {
+  const duplicate = useSelector((state) => state.favourites.duplicate);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (duplicate) {
+      setTimeout(() => {
+        dispatch({ type: RESET_DUPLICATE });
+      }, 3500);
+    }
+  }, [duplicate]);
+
   return (
-    <div>
+    <>
+      {console.log("duplicate:", duplicate)}
+      {duplicate && <AlertFav />}
       <SideBar />
       <div className="md:ml-[200px]">
         <NavBarDesktop />
         <NavBar />
-        <div className="pl-[30px]">
-          <News />
-          <NewEpisodes />
-          <MoreToExplore />
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favourites" element={<Favourites />} />
+        </Routes>
         <Footer />
         <PlayerMobile />
       </div>
-    </div>
+    </>
   );
 }
 

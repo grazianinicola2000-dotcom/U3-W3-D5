@@ -10,10 +10,13 @@
   --color-slider: #ababab;
   --color-icons: #626262;
   --color-main-text: #ededed;
+  --color-bg-sideBar: #252526;
   /* FONT */
   --font-main: "Inter", sans-serif;
   /* FONT SIZE */
   --text-footer: 10px;
+  --text-artist: 12px;
+  --text-remove: 8px;
 }
 
 @import "tailwindcss";

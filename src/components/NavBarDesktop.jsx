@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const NavBarDesktop = function () {
   return (
-    <section className="hidden md:grid grid-cols-42 py-1 h-[50px] flex items-center">
+    <section className="hidden md:grid grid-cols-42 py-1 h-[50px] flex items-center bg-bg-secondary">
       <div className="flex gap-3 text-text-footer col-start-5 items-center">
         <i className="bi bi-shuffle text-xs"></i>
         <i className="bi bi-skip-backward-fill"></i>

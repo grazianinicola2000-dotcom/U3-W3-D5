@@ -12,7 +12,7 @@ const NewEpisodes = function () {
           <img className="rounded-lg" src="/2a.png" alt="prologo_con_Abuelo" />
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs">Prólogo con Abuelo</p>
-            <i className="bi bi-explicit-fill text-xs"></i>
+            <i className="bi bi-explicit-fill text-xs text-icons"></i>
           </div>
         </div>
         <div className="w-[150px] flex-shrink-0">
