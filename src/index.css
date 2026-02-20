@@ -2,10 +2,18 @@
   /* COLORS */
   --color-bg-main: #1f1f1f;
   --color-bg-secondary: #2c2c2c;
-  --color-info: #d60017;
+  --color-bg-secondary-navDesk: #4d4d4d;
+  --color-bg-footer: #323232;
+  --color-text-footer: #8f8f8f;
+  --color-info: #ee5566;
+  --color-loginButton: #d60017;
+  --color-slider: #ababab;
   --color-icons: #626262;
-  /* FONTS */
+  --color-main-text: #ededed;
+  /* FONT */
   --font-main: "Inter", sans-serif;
+  /* FONT SIZE */
+  --text-footer: 10px;
 }
 
 @import "tailwindcss";
